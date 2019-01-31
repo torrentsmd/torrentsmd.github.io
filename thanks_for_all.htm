@@ -1,0 +1,468 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><header>
+<title>Bye bye</title>
+
+<script type="text/javascript" src="./thanks_for_all/jquery.min.js"></script>
+<script type="text/javascript" src="./thanks_for_all/plax.js"></script>
+
+<style rel="stylesheet" type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Questrial);
+    /*@import url(//fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT); &subset=latin,cyrillic
+    */
+* {
+  padding:0;
+  margin: 0;
+}
+
+body
+{
+  background: #000 url('./thanks_for_all/MatrixCodeWallpaper1600.jpg');
+}
+#par {
+  width: 800px;
+  height: 630px;
+  position: relative;
+  display: block;
+  padding-left: 130px;
+  background-color: transparent;
+  margin-left: 5%;
+}
+
+#matrix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 903px;
+  height: 610px;
+  }
+
+#bg {
+  position: absolute;
+  top: 460px;
+  left: 0;
+  z-index: 1;
+  width: 910px;
+  height: 152px;
+}
+
+#trinity {
+  position: absolute;
+  top: 40px;
+  left: 310px;
+  z-index: 2;
+  width: 394px;
+  height: 532px;
+}
+
+#neo {
+  position: absolute;
+  top: 10px;
+  left: 550px;
+  z-index: 3;
+  width: 303px;
+  height: 586px;
+}
+
+#neoBalonSpart {
+  visibility: hidden;
+}
+
+#morpheus {
+  position: absolute;
+  top: 210px;
+  left: 355px;
+  z-index: 4;
+  width: 414px;
+  height: 476px;
+}
+
+#mar, #marMuscat {
+  position: absolute;
+  top: 350px;
+  left: 625px;
+  z-index: 4;
+  width: 35px;
+  height: 52px;
+}
+
+#marMuscat {
+  display: none;
+}
+
+#inghetata {
+  position: absolute;
+  top: 350px;
+  left: 455px;
+  z-index: 4;
+  width: 31px;
+  height: 52px;
+}
+
+#grivei, #griveisatul {
+  position: absolute;
+  top: 320px;
+  left: 230px;
+  z-index: 7;
+}
+
+#griveisatul {
+  display: none;
+}
+
+#text {
+  position: absolute;
+  top: 3%;
+  left: 20px;
+  z-index: 8;
+
+}
+
+.green-box {
+  color:rgb(162,205,90);
+  background-color: rgba(47,79,47,.8);
+  font-size: 14px;
+  padding: 10px;
+  font-family: Calibri, sans-serif;
+  width: 90%;
+  height:auto;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+#text h1 {
+  font-size: 34px;
+  font-family: Questrial, Helvetica, Arial, sans-serif;
+  line-height: 2;
+}
+
+#text h2 {
+  font-size: 18px;
+  font-family: Questrial, Helvetica, Arial, sans-serif;
+}
+
+#text a {
+  color: rgb(102,205,0);
+}
+
+#credit {
+  color: gray;
+  font-size: .8em;
+  font-family: Calibri;
+    background: #454837;
+    text-align: center;
+    position: relative;
+}
+#credit a{
+    color: #808080;
+}
+
+.cnt
+{
+    position: relative;
+    overflow: hidden;
+}
+
+.bg
+{
+    height: 250px;
+    background: #454837;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: -40px;
+}
+
+.align
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#text a.doTest
+{
+    text-align: center;
+    display: block;
+    font-size: 18px;
+    /*        color: #C33403;*/
+}
+
+.unselectable
+{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.doTest .info
+{
+    display: none;
+    font-size: 35px;
+    font-family: Questrial, Helvetica, Arial, sans-serif;
+    cursor: default;
+}
+.doTest .info.error
+{
+    font-size: 20px;
+    cursor: pointer;
+}
+#text .doTest .info.success
+{
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFE;
+}
+.doTest .info.loading
+{
+    cursor: wait;
+}
+.doTest .info img
+{
+    vertical-align: middle;
+}
+
+@media (max-width: 576px) {
+  h1 {
+
+  }
+
+}
+</style>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var mar = $('#mar');
+    var marMuscat = $('#marMuscat');
+    var grivei = $('#grivei');
+    var griveisatul = $('#griveisatul');
+    var trinity = $('#trinity');
+    var neo = $('#neo');
+
+    $('#text').plaxify({"xRange":10,"yRange":10})
+        grivei.plaxify({"xRange":15,"yRange":15})
+    $('#morpheus').plaxify({"xRange":25,"yRange":20})
+        mar.plaxify({"xRange":25,"yRange":20})
+    $('#inghetata').plaxify({"xRange":25,"yRange":20})
+        neo.plaxify({"xRange":35,"yRange":40})
+        trinity.plaxify({"xRange":15,"yRange":30})
+        $('.bg').plaxify({"xRange":5,"yRange":25})
+        //$('#matrix').plaxify({"xRange":5,"yRange":15})
+    $.plax.enable()
+
+    var griveiAnimated = (function(){
+      var marVizibil = true;
+      var marSrc = mar.attr("src");
+      var griveiLeft = grivei.css("left");
+      var animationStarted = false;
+
+      // Mincam marul
+      $("#griveiTakeRedPill").click(function(){
+        var marAnimationAscuns = false;
+        grivei.fadeOut(500);
+        griveisatul.fadeIn(500);
+                griveisatul.animate({left:"615px"},{
+            duration:1000,
+            step: function(now, fx) {
+                if (now >= 515 && marAnimationAscuns == false) {
+                  marAnimationAscuns = true;
+                  marVizibil = !marVizibil;
+                  mar.attr("src",  (marVizibil? marSrc : marMuscat.attr("src")) ) ;
+                }
+            },
+            complete: function() {
+              griveisatul.fadeOut(1000,function() {
+                grivei.fadeIn();
+                // Reset
+                griveisatul.css({"left":griveiLeft});
+              })
+            }
+        });
+        return false;
+      });
+
+      // Mincam inghetata
+            $("#griveiTakeGreenPill").click(function()
+            {
+                var griveiCopy = grivei.clone().insertAfter(grivei).hide();
+        var marAnimationAscuns = false;
+        grivei.fadeOut(500);
+        griveisatul.fadeIn(500);
+        var griveiInitial = grivei;
+
+                griveisatul.animate({left:"430px"},
+                        {
+            duration:700,
+            complete: function() {
+              griveisatul.fadeOut(1000);
+
+              griveiCopy.css({"left":griveisatul.css("left")}).fadeIn(1000,function(){
+                $('#inghetata').fadeOut(1000,function() {
+                  griveiCopy.animate({"left":griveiLeft},function() {
+                    griveiCopy.hide();
+                    grivei.show();
+                    griveisatul.css({"left":griveiLeft});
+                  });
+                });
+
+              });
+
+            }
+        });
+        return false;
+      });
+    })();
+
+
+    var balonAnimated = (function(){
+      var debug = true;
+      var furcaTimer;
+      var griveiTimer;
+
+      var furcaSpargeBalonul = function() {
+        var distance = parseInt(neo.css('left')) - parseInt(trinity.css('left'));
+        var threshold = 242;
+        if ( debug ) console.log("furca", distance );
+        if ( distance <= threshold ) {
+          neo.attr("src", $("#neoBalonSpart").attr("src") );
+          clearInterval(furcaTimer);
+        }
+
+            };
+
+      furcaTimer = setInterval(function(){furcaSpargeBalonul();},100);
+
+    })();
+
+
+        $('img').addClass('unselectable');
+        var wl = window.location;
+        var search = wl.search;
+        var isSearch = function(){return search !== ''};
+        var path = wl.pathname;
+        var hash = wl.hash;
+        var hostname = wl.hostname;
+        var host = 'http://'+hostname+'/';
+        var random = function(){return 'matrix='+$.now();};
+
+        search = isSearch()&&search.search(/(&|\?)matrix/)>-1?search.replace(/(&|\?)matrix=[0-9]+/,''):search;
+        var rUrl = path + (isSearch()?search+'&':'?') + random() + hash;
+
+        function clickOnReload(e)
+        {
+            wl.replace(rUrl);
+            e.preventDefault();
+        }
+
+        var $dotest = $('.doTest');
+        var $loading = $dotest.find('.loading');
+        var $error = $dotest.find('.error');
+        var $success = $dotest.find('.success');
+
+        $('a.reload').click(clickOnReload);
+        $success.click(clickOnReload);
+
+        $('a.toTMD').attr('href',host).click(function(e)
+        {
+            wl.replace(host+'?'+random());
+            e.preventDefault();
+        });
+        $('a.toForum').click(function()
+        {
+            //wl.replace(host+this.href.replace(/^http:\/\/.*\//g,''));
+            this.href = host+this.href.replace(/^http:\/\/.*\//g,'');
+        });
+
+
+
+        $dotest.find('a.doTest').click(test);
+        $error.click(test);
+
+        function test(e)
+        {
+            $(this).hide();
+            $loading.show();
+
+            $.ajax(
+                    {
+                        url: rUrl,
+                        cache: false,
+                        //success:success,
+                        error: error,
+                        complete: complete
+                    });
+
+            e.preventDefault();
+        }
+
+        function error(){$error.show();}
+        function complete(data)
+        {
+            $loading.hide();
+            var isError = data.responseText.match(/<title>(.*?)<\/title>/)[1].search(/(Eroare)|(Error)/)>-1;
+            if(isError)
+                error();
+            else
+                success();
+        }
+        function success(){$success.show();}
+  })
+</script>
+
+
+</header>
+
+
+<div id="text">
+  <div class="green-box">
+    <h1>Siteul s-a inchis.</h1>
+    <h2>Consideram ca ne-am indeplinit misiunea definită la lansarea siteului.</h2>
+    <br>
+    <p>
+      Reamintim că acest site întotdeauna a avut un caracter non-comercial și caritativ. Fundamentul său fiind voluntarii care s-au implicat.<br/>
+      În ultimii ani, popularitatea siteului cât și implicarea voluntarilor, s-a diminuat dramatic. Din acest motiv, consideram că ne-am îndeplinit misiunea.<br/>
+      Considerăm contribuția comunității noastre ca una semnificativă la intrarea în era digitală.<br/>
+      Tranzitia la un model comercial, sugerat de unii, nu coresponde cu valorile fundamentale definite de la inceput.<br/><br/>
+    </p>
+    <p>
+    <h2>Mulțumim tuturor celor care s-au implicat.</h2><br/>
+    Credem ca am reușit să formăm una din cele mai minunate și generoase comunități care a existat vreodata in mediul online din țară.</br>
+    Sharing is caring. <img src="./thanks_for_all/md.gif" style="vertical-align:middle" />
+    </p>
+  </div>
+  <br><br>
+
+  <iframe width="250" height="80" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/554031954&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+</div>
+
+
+<div class="align">
+  <div style="position: static;">
+    <div class="cnt">
+      <div id="par">
+        <img id="trinity" src="./thanks_for_all/trinity.png" class="unselectable" style="left: 313.814px; top: 44.9885px;">
+        <img id="neo" src="./thanks_for_all/neo.png" class="unselectable" style="left: 558.234px; top: 16.6513px;">
+        <img id="neoBalonSpart" src="./thanks_for_all/neoBalonSpart.png" class="unselectable">
+        <img id="morpheus" src="./thanks_for_all/morpheusSarac.png" class="unselectable" style="left: 361.024px; top: 213.326px;">
+        <img id="mar" src="./thanks_for_all/mar.png" class="unselectable" style="left: 631.024px; top: 353.326px;">
+        <img id="marMuscat" src="./thanks_for_all/marMuscat.png" class="unselectable">
+        <img id="inghetata" src="./thanks_for_all/inghetata.png" class="unselectable" style="left: 461.024px; top: 353.326px;">
+        <img id="grivei" src="./thanks_for_all/supergriveilogo.png" usemap="#griveimap" class="unselectable" style="left: 233.814px; top: 322.994px;">
+        <map name="griveimap">
+        <area shape="rect" coords="52,118,71,134" href="https://torrentsmd.com/toto" title="Pilula verde" id="griveiTakeGreenPill">
+        <area shape="rect" coords="70,113,89,135" href="https://torrentsmd.com/toto" title="Pilula rosie" id="griveiTakeRedPill">
+        </map>
+        <img id="griveisatul" src="./thanks_for_all/supergriveilogo2.png" class="unselectable">
+      </div>
+    <div class="bg" style="left: 1.60479px; top: 424.657px;"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</body></html>
